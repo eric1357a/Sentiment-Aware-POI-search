@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Sentiment-Aware POI Searching System</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:300" rel="stylesheet"> 
 	<link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -41,11 +41,11 @@
 
 			var lat = parseFloat(document.getElementById('lat').value);
 			var lng = parseFloat(document.getElementById('lng').value);
-			if(isNaN(lat) || isNaN(lng)){
+			if (isNaN(lat) || isNaN(lng)) {
 				lat = 22.337877;
 				lng = 114.181800;
-				console.log("lat = "+lat+"\n"+"lng = "+lng);
-				
+				console.log("lat = " + lat + "\n" + "lng = " + lng);
+
 			}
 			var radius = document.querySelector('input[name="radius"]:checked').value;
 			circle = new google.maps.Circle({
@@ -128,18 +128,14 @@
 						</ul>
 					</li>
 				</ul>
-				
-					
-						<H2>Sentiment-Aware POI Searching System</H2>
-						<hr>
-					
-				
+				<H2>Sentiment-Aware POI Searching System</H2>
+				<hr>
 				<div class="row">
-					<div class="col-md-2">
+					<div class="col-md-3">
 						<div class="tabbable" id="tabs-583795">
 							<ul class="nav nav-tabs">
 								<li class="active">
-									<a href="#panel-319391" data-toggle="tab">Simple</a>
+									<a href="#panel-319391" data-toggle="tab">Basic</a>
 								</li>
 								<li>
 									<a href="#panel-868780" data-toggle="tab">Advance</a>
@@ -336,7 +332,11 @@
 						</script>
 
 					</div>
-					<div class="col-md-2">
+
+				</div>
+				<div class="col-md-12"></div>
+				<div class="row">
+					<div class="col-md-3">
 						<div class="panel panel-default collapse" id="result">
 							<div class="panel-heading">
 								<h3 class="panel-title">
@@ -355,13 +355,10 @@
 							<div class="panel-footer">
 								Our Lady of Maryknoll Hospital
 							</div>
+
 						</div>
 					</div>
-				</div>
-				<div class="col-md-12"></div>
-				<div class="row">
-					<div class="col-md-2"></div>
-					<div class="col-md-8">
+					<div class="col-md-9">
 						<div class="panel panel-default collapse" id="result2">
 							<div class="panel-heading">
 								<h3 class="panel-title">
@@ -376,6 +373,9 @@
 							</div>
 							<div class="panel-body">
 								Score: 1.2
+							</div>
+							<div class="panel-footer">
+								<a href="./result.html">Edit</a>
 							</div>
 						</div>
 
